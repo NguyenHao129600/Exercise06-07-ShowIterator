@@ -1,0 +1,36 @@
+========== EXERCISE 6 ==========
+Program: Intro by Speaker A (10 min): Composite[Autumn Live by The Band -> Composite[The First Movie (2023) -> Intro by Speaker B (5 min): The Second Movie (2024)]]
+Total running time: 270 min
+
+Direct components of outer composite:
+ 1. Autumn Live by The Band
+ 2. Composite[The First Movie (2023) -> Intro by Speaker B (5 min): The Second Movie (2024)]
+
+Unpack nested components (depth-first):
+  - Autumn Live by The Band
+    - The First Movie (2023)
+    - Intro by Speaker B (5 min): The Second Movie (2024)
+Show interface modified? NO
+
+========== EXERCISE 7 ==========
+Program: Intro by Speaker A (10 min): Composite[Autumn Live by The Band -> Composite[The First Movie (2023) -> Intro by Speaker B (5 min): The Second Movie (2024)]]
+Total running time: 270 min
+
+Components accessed through a Show variable:
+ - Autumn Live by The Band
+ - Composite[The First Movie (2023) -> Intro by Speaker B (5 min): The Second Movie (2024)]
+
+Unpack nested components (depth-first):
+  - Autumn Live by The Band
+    - The First Movie (2023)
+    - Intro by Speaker B (5 min): The Second Movie (2024)
+Show interface modified? YES (extends Iterable<Show>)
+[PASS] Ex6: Show remains the original three-method interface
+[PASS] Ex6: nested iterator retains direct-child order
+[PASS] Ex6: 2-5 child constraint
+[PASS] Ex6: immutable iterator and independent copy
+[PASS] Ex7: Show interface is Iterable<Show>
+[PASS] Ex7: leaf is empty; composite yields components
+[PASS] Ex7: decorator preserves iterable behavior
+
+RESULT: 7 PASSED, 0 FAILED
